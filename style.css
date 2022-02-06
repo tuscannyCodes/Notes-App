@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(255, 247, 134);
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+}
+
+.notesHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 50em;
+  height: 20em;
+}
+
+.note {
+  display: flex;
+  overflow: auto;
+  display: flex;
+  background-color: white;
+  height: 3em;
+  width: 8em;
+  padding: 1em;
+  margin: 1em;
+}
+
+.noteText {
+  word-wrap: break-word;
+  height: 3em;
+  width: 8em;
+  background-color: red;
+}
+
+.mainInput {
+  resize: both;
+  height: 5em;
+  width: 20em;
+}
