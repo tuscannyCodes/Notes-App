@@ -4,10 +4,11 @@ body {
 
 .mainDiv {
   display: flex;
+  flex-wrap: column;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: blue; */
+  background-color: blue;
 }
 
 .notesHolder {
@@ -19,10 +20,19 @@ body {
   height: 20em;
 }
 
-.note {
+.eachNote {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.note {
   overflow: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: white;
   height: 3em;
   width: 8em;
@@ -31,12 +41,20 @@ body {
 }
 
 .noteText {
+  overflow: auto;
   word-wrap: break-word;
   height: 3em;
   width: 8em;
-  background-color: red;
+  /* background-color: red; */
 }
 
+.seeMoreButton {
+  background-color: cornflowerblue;
+  color: inherit;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
 .mainInput {
   resize: both;
   height: 5em;
