@@ -3,28 +3,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MY NOTES</title>
+    <title>NOTES</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+
+   
     <div class="mainDiv">
+        <div class="expandedNote" id="expandedNote"><button class="closeExpand" id="closeExpand">close</button></div>
       <h1>Notes App</h1>
       <form action="submit">
       <textarea class="mainInput" id="mainInput"></textarea>
-      <button class="mainButton" type="button" id="mainButton">Create</button>
+      
     </form>
+    <button class="mainButton" type="button" id="mainButton">New note</button>
+   
       <div class="notesHolder" id="notesHolder">
           <div class="eachNote">
-        <div class="note"><p class="noteText">agsdgadsdfvfd</p>
+        <!-- <div class="note"><p class="noteText">agsdgadsdfvfd</p>
             
         </div>
-        <button class="seeMoreButton" id="seeMoreButton">see more
+        <button class="expandButton" id="expandButton">Expand
 
         </button>
         
-        </div>
+        </div> -->
         
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>

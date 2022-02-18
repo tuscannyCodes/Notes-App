@@ -3,7 +3,9 @@
 const inputBox = document.getElementById('mainInput');
 const createButton = document.getElementById('mainButton');
 const notesHolder = document.getElementById('notesHolder');
-const seeMoreButton = document.getElementById('seeMoreButton')
+const seeMoreButton = document.getElementById('sexpandButton');
+const expandedNote = document.getElementById('expandedNote');
+
 let newButton;
 let inputBoxValue;
 let newDiv;
@@ -19,13 +21,18 @@ console.log(inputBoxValue)
 }
 
 
+const expandHandler = () => {
 
+expandedNote.style.visibility =  'visible';
+}
+
+
+//creates new notecard
 const addValueToCard = () => {
 
     submitHandler();
     let firstNewDiv= document.createElement('div');
     firstNewDiv.classList.add('eachNote');
-    
     newDiv= document.createElement('div');
     newDiv.classList.add('note');
     firstNewDiv.appendChild(newDiv);
@@ -36,19 +43,18 @@ const addValueToCard = () => {
     newDiv.appendChild(newParagraph);
     notesHolder.appendChild(firstNewDiv);
     newButton = document.createElement("button");
-    newButton.classList.add('seeMoreButton')
-    newButton.innerHTML = "See more";
-    firstNewDiv.appendChild(newButton)
-    console.log(seeMoreButton)
+    newButton.classList.add('expandButton')
     
+    newButton.innerHTML = "Expand";
+    firstNewDiv.appendChild(newButton)
+  
+    newButton.addEventListener('click',expandHandler) // will not work outside of the function?
 }
 
-const noteClick = () => {
 
-    alert('Note clicked');
-}
 
 //LISTENERS
 
 createButton.addEventListener('click', addValueToCard);
-seeMoreButton.addEventListener('click', function() {alert('See More')})
+
+

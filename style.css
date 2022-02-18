@@ -2,13 +2,20 @@ body {
   background-color: rgb(255, 247, 134);
 }
 
+/* .shadowDiv {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  padding: none;
+} */
+
 .mainDiv {
   display: flex;
   flex-wrap: column;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .notesHolder {
@@ -28,6 +35,7 @@ body {
 }
 
 .note {
+  border-radius: 5px;
   overflow: auto;
   display: flex;
   align-items: center;
@@ -48,9 +56,9 @@ body {
   /* background-color: red; */
 }
 
-.seeMoreButton {
+.expandButton {
   background-color: cornflowerblue;
-  color: inherit;
+  color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -59,4 +67,24 @@ body {
   resize: both;
   height: 5em;
   width: 20em;
+}
+
+.expandedNote {
+  border-radius: 10px;
+  margin-top: 30px;
+  border: 1px solid;
+  position: absolute;
+  height: 10em;
+  width: 30em;
+  background-color: white;
+  visibility: hidden;
+}
+
+.closeExpand {
+  float: right;
+  background-color: firebrick;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
